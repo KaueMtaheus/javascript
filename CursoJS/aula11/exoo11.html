@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio1 aula 10</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font: normal 13px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua Nacionalidade</h1>       
+    Digite seu Pais: <input type="name" name="Nacin" id="Nacin">
+    <input type="button" value="buscar" onclick="cidadania()">
+    <div id="res"></div>
+    <script>
+        function cidadania() {
+        var pais = window.document.querySelector('input#Nacin')
+        var res = window.document.querySelector('div#res')
+        var vel = (pais.value)
+        res.innerHTML = `<p>Sua nacionalidade é <strong>${vel}</strong></p>`
+        if(vel != 'Brasil') {
+            res.innerHTML = `<p>Você é <strong>Estrangeiro</strong></p>`
+        }else{
+            res.innerHTML = `<p>Você é <strong>Brasileiro</strong></p>`    
+        }
+    }
+    </script>
+</body>
+</html>
